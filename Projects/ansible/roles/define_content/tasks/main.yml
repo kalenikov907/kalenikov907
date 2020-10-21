@@ -1,0 +1,13 @@
+---
+ - name: print hostnames
+   debug:
+    msg: "Printing hostname: {{inventory_hostname}}"
+
+ - name: Make variable
+   shell: cat /etc/iaac
+   register: variable_iaas
+
+ - name: print variable
+   debug:
+    msg: "Printing variable: {{variable_iaas}}"
+

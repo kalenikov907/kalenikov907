@@ -1,0 +1,15 @@
+---
+- name: Create file for iaas
+  hosts: iaas
+  become: yes
+  
+  roles: 
+   - create_file
+
+- name: Define variable
+  hosts: ALL_servers 
+  become: yes
+ 
+  roles:
+    - define_content
+
